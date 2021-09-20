@@ -14,8 +14,13 @@
 		"db:down": "docker rm -f odict-pg",
 		"migrate": "dotenv -- bazel run //tools/migrator"
 	},
+	"prisma": {
+		"seed": "node --loader ts-node/esm prisma/seed.ts"
+	},
 	"devDependencies": {
 		"@sveltejs/kit": "next",
+		"@types/he": "^1",
+		"@types/lodash-es": "^4",
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
 		"@typescript-eslint/parser": "^4.19.0",
 		"autoprefixer": "^10.3.4",
@@ -33,11 +38,16 @@
 		"svelte-preprocess": "^4.9.4",
 		"tailwindcss": "^2.2.15",
 		"tslib": "^2.0.0",
-		"typescript": "^4.4.0"
+		"typescript": "^4.4.3"
 	},
 	"type": "module",
 	"dependencies": {
 		"@prisma/client": "3.0.2",
-		"dotenv-cli": "^4.0.0"
+		"@types/node": "^16.9.4",
+		"dotenv-cli": "^4.0.0",
+		"fast-xml-parser": "^3.20.0",
+		"he": "^1.2.0",
+		"lodash-es": "^4.17.21",
+		"ts-node": "^10.2.1"
 	}
 }
