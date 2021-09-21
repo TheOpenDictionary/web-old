@@ -9,8 +9,8 @@ generator client {
 
 model Language {
   id   BigInt @id @default(autoincrement()) @db.BigInt
-  code String @db.Text
-  flag String @db.Text
+  code String @unique @db.Text
+  flag String @unique @db.Text
 
   sourceDictionaries Dictionary[] @relation(name: "source_language_dict")
   targetDictionaries Dictionary[] @relation("target_language_dict")
@@ -25,16 +25,20 @@ model Dictionary {
   targetLanguageID BigInt   @db.BigInt
   sourceLanguage   Language @relation(name: "source_language_dict", fields: [sourceLanguageID], references: [id])
   targetLanguage   Language @relation(name: "target_language_dict", fields: [targetLanguageID], references: [id])
+  entries          Entry[]
 
   @@map("dictionaries")
 }
 
 model Entry {
-  id          BigInt      @id @default(autoincrement()) @db.BigInt
-  createdAt   DateTime    @default(now())
-  updatedAt   DateTime    @updatedAt
-  term        String      @db.Text
-  etymologies Etymology[]
+  id           BigInt      @id @default(autoincrement()) @db.BigInt
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  term         String      @db.Text
+  etymologies  Etymology[]
+  dictionaryID BigInt?
+
+  Dictionary Dictionary? @relation(fields: [dictionaryID], references: [id])
 
   @@map("entries")
 }

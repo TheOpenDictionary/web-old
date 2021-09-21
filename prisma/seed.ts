@@ -7,61 +7,76 @@ import prisma from '@prisma/client';
 import xml from 'fast-xml-parser';
 import he from 'he';
 
+import type { Dictionary } from './types';
+
 const client = new prisma.PrismaClient();
 const dictionaryDir = join(dirname(fileURLToPath(import.meta.url)), 'dictionaries');
-const files = readdirSync(dictionaryDir.toString()).map((file) => join(dictionaryDir, file));
+const files = readdirSync(dictionaryDir.toString());
 
 const convertToArray = <T>(value: T | T[]): T[] => {
+	if (!value) return [];
 	return compact(isArray(value) ? value : [value]);
 };
 
-const seed = files.forEach(async (file) => {
+const seed = files.map(async (file) => {
 	const splitFilename = file.split('-');
 
 	const [sourceLanguage, targetLanguage] = splitFilename;
 
-	const data = xml.parse(readFileSync(file, 'utf8'), {
+	const { dictionary } = xml.parse(readFileSync(join(dictionaryDir, file), 'utf8'), {
 		attributeNamePrefix: '',
 		ignoreAttributes: false,
 		attrValueProcessor: (val) => he.decode(val, { isAttributeValue: true }),
 		tagValueProcessor: (val) => he.decode(val)
+	}) as { dictionary: Dictionary };
+	console.log(convertToArray(dictionary.entry).length);
+	await client.dictionary.create({
+		data: {
+			sourceLanguage: {
+				connectOrCreate: {
+					create: {
+						code: sourceLanguage,
+						flag: sourceLanguage
+					},
+					where: {
+						code: sourceLanguage
+					}
+				}
+			},
+			targetLanguage: {
+				connectOrCreate: {
+					create: {
+						code: targetLanguage,
+						flag: targetLanguage
+					},
+					where: {
+						code: targetLanguage
+					}
+				}
+			},
+			name: dictionary.name,
+			entries: {
+				create: convertToArray(dictionary.entry)
+					.slice(1, 5)
+					.map((entry) => ({
+						term: entry.term,
+						etymologies: {
+							create: convertToArray(entry.ety).map((ety) => ({
+								description: ety?.description,
+								usages: convertToArray(ety.usage).map((usage) => ({
+									pos: usage?.pos,
+									definitions: convertToArray(usage?.definition),
+									groups: convertToArray(usage.group).map((group) => ({
+										description: group.description,
+										definitions: convertToArray(group.definition)
+									}))
+								}))
+							}))
+						}
+					}))
+			}
+		}
 	});
-
-	// client.dictionary.create({
-	//   data: {
-	//     name: dictionary.name,
-	//   }
-	// });
-	console.log(JSON.stringify(data));
-	// data.dictionary.entry.forEach((entry) => {
-	// 	const { id, term, ety } = entry;
-
-	// 	convertToArray(ety).forEach(({ usage }) => {
-	// 		convertToArray(usage).forEach(({ group, definition, pos }) => {
-	// 			console.log(definition);
-	// 			convertToArray(group).forEach(({ definition }) => {
-	// 				console.log(definition);
-	// 			});
-	// 		});
-	// 	});
-	// 	console.log(term);
-	// });
-	// const { dictionary } = data;
-	// const { entries } = dictionary;
-	// const { entry } = entries;
-	// const { id, word, definition } = entry;
-	// const { language, region } = id;
-	// const { text } = definition;
-	// const { $t } = text;
-
-	// client.dictionary.create({
-	// 	data: {
-	// 		language,
-	// 		region,
-	// 		word,
-	// 		definition: $t
-	// 	}
-	// });
 });
 
-export {};
+Promise.all(seed).catch((e) => console.log(e));
