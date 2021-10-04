@@ -29,7 +29,7 @@ const seed = files.map(async (file) => {
 		attrValueProcessor: (val) => he.decode(val, { isAttributeValue: true }),
 		tagValueProcessor: (val) => he.decode(val)
 	}) as { dictionary: Dictionary };
-	console.log(convertToArray(dictionary.entry).length);
+
 	await client.dictionary.create({
 		data: {
 			sourceLanguage: {
@@ -56,24 +56,22 @@ const seed = files.map(async (file) => {
 			},
 			name: dictionary.name,
 			entries: {
-				create: convertToArray(dictionary.entry)
-					.slice(1, 5)
-					.map((entry) => ({
-						term: entry.term,
-						etymologies: {
-							create: convertToArray(entry.ety).map((ety) => ({
-								description: ety?.description,
-								usages: convertToArray(ety.usage).map((usage) => ({
-									pos: usage?.pos,
-									definitions: convertToArray(usage?.definition),
-									groups: convertToArray(usage.group).map((group) => ({
-										description: group.description,
-										definitions: convertToArray(group.definition)
-									}))
+				create: convertToArray(dictionary.entry).map((entry) => ({
+					term: entry.term,
+					etymologies: {
+						create: convertToArray(entry.ety).map((ety) => ({
+							description: ety?.description,
+							usages: convertToArray(ety.usage).map((usage) => ({
+								pos: usage?.pos,
+								definitions: convertToArray(usage?.definition),
+								groups: convertToArray(usage.group).map((group) => ({
+									description: group.description,
+									definitions: convertToArray(group.definition)
 								}))
 							}))
-						}
-					}))
+						}))
+					}
+				}))
 			}
 		}
 	});
