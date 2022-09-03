@@ -1,4 +1,4 @@
-import prisma, { Dictionary, Entry, Language } from '@prisma/client';
+import prisma, { Dictionary, Entry, Etymology, Language } from '@prisma/client';
 const { Prisma } = prisma;
 import type { Dictionary as XmlDictionary } from './types';
 import { fileURLToPath } from 'url';
@@ -113,7 +113,7 @@ async function main() {
 		}
 	});
 
-	// TODO create entries
+	// create entries
 	let xmlEntries = convertToArray(dictionary.entry);
 	for (let i = 0; i < xmlEntries.length; i++) {
 		const dbEntry: Entry = await prismaClient.entry.create({
@@ -122,6 +122,15 @@ async function main() {
 				dictionaryID: dbDict.id
 			}
 		});
+		// create etymologies
+		for (let j = 0; j < convertToArray(xmlEntries[i]?.ety).length; j++) {
+			const dbEty: Etymology = await prismaClient.etymology.create({
+				data: {
+					description: xmlEntries[i].term,
+					entryID: dbEntry.id
+				}
+			});
+		}
 	}
 }
 
