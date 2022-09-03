@@ -1,4 +1,12 @@
-import prisma, { Dictionary, Entry, Etymology, Language } from '@prisma/client';
+import prisma, {
+	Definition,
+	Dictionary,
+	Entry,
+	Etymology,
+	Group,
+	Language,
+	Usage
+} from '@prisma/client';
 const { Prisma } = prisma;
 import type { Dictionary as XmlDictionary } from './types';
 import { fileURLToPath } from 'url';
@@ -113,8 +121,10 @@ async function main() {
 		}
 	});
 
+	// here after creating, we get the ID back from the DB
+	// and we use that ID to set the FKs of the children
 	// create entries
-	let xmlEntries = convertToArray(dictionary.entry);
+	const xmlEntries = convertToArray(dictionary.entry);
 	for (let i = 0; i < xmlEntries.length; i++) {
 		const dbEntry: Entry = await prismaClient.entry.create({
 			data: {
@@ -123,13 +133,60 @@ async function main() {
 			}
 		});
 		// create etymologies
-		for (let j = 0; j < convertToArray(xmlEntries[i]?.ety).length; j++) {
+		const xmlEtyomologies = convertToArray(xmlEntries[i]?.ety);
+		for (let j = 0; j < xmlEtyomologies.length; j++) {
 			const dbEty: Etymology = await prismaClient.etymology.create({
 				data: {
 					description: xmlEntries[i].term,
 					entryID: dbEntry.id
 				}
 			});
+
+			// create usages
+			const xmlUsages = convertToArray(xmlEtyomologies[j]?.usage);
+			for (let k = 0; k < xmlUsages.length; k++) {
+				const dbUsage: Usage = await prismaClient.usage.create({
+					data: {
+						pos: xmlUsages[k]!.pos,
+						etymologyID: dbEty.id
+					}
+				});
+
+				// create groups
+				const xmlGroups = convertToArray(xmlUsages[k]?.group);
+				for (let l = 0; l < xmlGroups.length; l++) {
+					const dbGroup: Group = await prismaClient.group.create({
+						data: {
+							description: xmlGroups[l]!.description,
+							usageID: dbUsage.id
+						}
+					});
+
+					// create grouped definitions
+					const xmlDefinitionsGroup = convertToArray(xmlGroups[l]?.definition);
+					for (const m of xmlDefinitionsGroup) {
+						const dbDefinition: Definition = await prismaClient.definition.create({
+							data: {
+								text: m!,
+								usageID: dbUsage.id,
+								groupID: dbGroup.id
+							}
+						});
+					}
+				}
+
+				// create definitions without groups
+				const xmlDefinitionsNoGroup = convertToArray(xmlUsages[k]?.definition);
+				for (const n of xmlDefinitionsNoGroup) {
+					const dbDefinition: Definition = await prismaClient.definition.create({
+						data: {
+							text: n!,
+							usageID: dbUsage.id,
+							groupID: null
+						}
+					});
+				}
+			}
 		}
 	}
 }
