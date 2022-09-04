@@ -1,38 +1,23 @@
-# create-svelte
+# odict-web
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+odict-web is an experimental web frontend for browsing ODict dictionaries.
 
-## Creating a project
+---
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Developer Setup
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+Build your `node_modules`:
 
-# create a new project in my-app
-npm init svelte@next my-app
+```
+yarn install
 ```
 
-> Note: the `@next` is temporary
+Run the project:
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```
+yarn dev
 ```
 
-## Building
+To connect to a local/remote DB, make sure to change the connection string in the [.env](./env) file to match its credentials, port, and name. To start, we'd create an empty DB with `CREATE DATABASE odict;`. Then, Prisma does the rest of the work ✨.
 
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+We use Prisma as an ORM for our Postgres DB. All documentation related to Prisma is located on [Prisma's official website](https://www.prisma.io/docs/). We have a Prisma schema set up to create/link to the database tables. Simply run `yarn prisma migrate dev --name init` to create the first migration. After, we load all ODXML dictionaries into the DB with the `yarn prisma db seed` command.
