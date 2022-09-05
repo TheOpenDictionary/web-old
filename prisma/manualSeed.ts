@@ -48,9 +48,6 @@ async function main() {
 		const sourceCode = splitFilename[0];
 		const targetCode = splitFilename[1].slice(0, -4);
 
-		console.log(sourceCode);
-		console.log(targetCode);
-
 		/* steps:
 		- get ids from language table
 		- check dictionaries if source/target dict exists already
