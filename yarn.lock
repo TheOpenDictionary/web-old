@@ -191,7 +191,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@playwright/test@npm:^1.25.2":
+"@playwright/test@npm:1.25.2":
   version: 1.25.2
   resolution: "@playwright/test@npm:1.25.2"
   dependencies:
@@ -248,7 +248,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-auto@npm:^1.0.0-next.75":
+"@sveltejs/adapter-auto@npm:1.0.0-next.75":
   version: 1.0.0-next.75
   resolution: "@sveltejs/adapter-auto@npm:1.0.0-next.75"
   dependencies:
@@ -291,7 +291,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0-next.484":
+"@sveltejs/kit@npm:1.0.0-next.484":
   version: 1.0.0-next.484
   resolution: "@sveltejs/kit@npm:1.0.0-next.484"
   dependencies:
@@ -387,7 +387,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/he@npm:^1":
+"@types/he@npm:1.1.2":
   version: 1.1.2
   resolution: "@types/he@npm:1.1.2"
   checksum: 71e9786c35330a2003a7692d5dc4f70946e4c45486f84d7a5792360c6c234cd34bf53421856de40a2c4bead9c21a805c309d72d012467f46bb2cce0571a9ba08
@@ -401,7 +401,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/lodash-es@npm:^4":
+"@types/lodash-es@npm:4.17.5":
   version: 4.17.5
   resolution: "@types/lodash-es@npm:4.17.5"
   dependencies:
@@ -424,7 +424,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^18.7.18":
+"@types/node@npm:18.7.18":
   version: 18.7.18
   resolution: "@types/node@npm:18.7.18"
   checksum: 8aec61f0f96e2a69ce51f1f40f949ca578bbb4fe05d7c0b8ce3aeeb848e90f755837f17f6ac132ca404d974fe9b2974150ad3b4984fc9dc7c3ceddb10bae0167
@@ -447,7 +447,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.37.0":
+"@typescript-eslint/eslint-plugin@npm:5.37.0":
   version: 5.37.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.37.0"
   dependencies:
@@ -470,7 +470,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.37.0":
+"@typescript-eslint/parser@npm:5.37.0":
   version: 5.37.0
   resolution: "@typescript-eslint/parser@npm:5.37.0"
   dependencies:
@@ -805,7 +805,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.4.11":
+"autoprefixer@npm:10.4.11":
   version: 10.4.11
   resolution: "autoprefixer@npm:10.4.11"
   dependencies:
@@ -1231,7 +1231,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cssnano@npm:^5.1.13":
+"cssnano@npm:5.1.13":
   version: 5.1.13
   resolution: "cssnano@npm:5.1.13"
   dependencies:
@@ -1430,7 +1430,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv-cli@npm:^6.0.0":
+"dotenv-cli@npm:6.0.0":
   version: 6.0.0
   resolution: "dotenv-cli@npm:6.0.0"
   dependencies:
@@ -1744,7 +1744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.5.0":
+"eslint-config-prettier@npm:8.5.0":
   version: 8.5.0
   resolution: "eslint-config-prettier@npm:8.5.0"
   peerDependencies:
@@ -1755,7 +1755,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-svelte3@npm:^4.0.0":
+"eslint-plugin-svelte3@npm:4.0.0":
   version: 4.0.0
   resolution: "eslint-plugin-svelte3@npm:4.0.0"
   peerDependencies:
@@ -1810,7 +1810,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.23.1, eslint@npm:^8.23.1":
+"eslint@npm:8.23.1":
   version: 8.23.1
   resolution: "eslint@npm:8.23.1"
   dependencies:
@@ -1970,7 +1970,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-xml-parser@npm:^4.0.10":
+"fast-xml-parser@npm:4.0.10":
   version: 4.0.10
   resolution: "fast-xml-parser@npm:4.0.10"
   dependencies:
@@ -2271,7 +2271,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"he@npm:^1.2.0":
+"he@npm:1.2.0":
   version: 1.2.0
   resolution: "he@npm:1.2.0"
   bin:
@@ -2554,7 +2554,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"lodash-es@npm:^4.17.21":
+"lodash-es@npm:4.17.21":
   version: 4.17.21
   resolution: "lodash-es@npm:4.17.21"
   checksum: 05cbffad6e2adbb331a4e16fbd826e7faee403a1a04873b82b42c0f22090f280839f85b95393f487c1303c8a3d2a010048bf06151a6cbe03eee4d388fb0a12d2
@@ -3031,37 +3031,37 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "odict-web@workspace:."
   dependencies:
-    "@playwright/test": ^1.25.2
+    "@playwright/test": 1.25.2
     "@prisma/client": latest
-    "@sveltejs/adapter-auto": ^1.0.0-next.75
-    "@sveltejs/kit": ^1.0.0-next.484
-    "@types/he": ^1
-    "@types/lodash-es": ^4
-    "@types/node": ^18.7.18
-    "@typescript-eslint/eslint-plugin": ^5.37.0
-    "@typescript-eslint/parser": ^5.37.0
-    autoprefixer: ^10.4.11
-    cssnano: ^5.1.13
-    dotenv-cli: ^6.0.0
-    eslint: ^8.23.1
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-svelte3: ^4.0.0
-    fast-xml-parser: ^4.0.10
-    he: ^1.2.0
-    lodash-es: ^4.17.21
-    postcss: ^8.4.16
-    postcss-load-config: ^4.0.1
-    prettier: ~2.7.1
-    prettier-plugin-svelte: ^2.7.0
+    "@sveltejs/adapter-auto": 1.0.0-next.75
+    "@sveltejs/kit": 1.0.0-next.484
+    "@types/he": 1.1.2
+    "@types/lodash-es": 4.17.5
+    "@types/node": 18.7.18
+    "@typescript-eslint/eslint-plugin": 5.37.0
+    "@typescript-eslint/parser": 5.37.0
+    autoprefixer: 10.4.11
+    cssnano: 5.1.13
+    dotenv-cli: 6.0.0
+    eslint: 8.23.1
+    eslint-config-prettier: 8.5.0
+    eslint-plugin-svelte3: 4.0.0
+    fast-xml-parser: 4.0.10
+    he: 1.2.0
+    lodash-es: 4.17.21
+    postcss: 8.4.16
+    postcss-load-config: 4.0.1
+    prettier: 2.7.1
+    prettier-plugin-svelte: 2.7.0
     prisma: latest
-    svelte: ^3.50.1
-    svelte-check: ^2.9.0
-    svelte-preprocess: ^4.10.7
-    tailwindcss: ^3.1.8
-    ts-node: ^10.9.1
-    tslib: ^2.4.0
-    typescript: ^4.8.3
-    vite: ^3.1.1
+    svelte: 3.50.1
+    svelte-check: 2.9.0
+    svelte-preprocess: 4.10.7
+    tailwindcss: 3.1.8
+    ts-node: 10.9.1
+    tslib: 2.4.0
+    typescript: 4.8.3
+    vite: 3.1.1
   languageName: unknown
   linkType: soft
 
@@ -3294,6 +3294,24 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"postcss-load-config@npm:4.0.1":
+  version: 4.0.1
+  resolution: "postcss-load-config@npm:4.0.1"
+  dependencies:
+    lilconfig: ^2.0.5
+    yaml: ^2.1.1
+  peerDependencies:
+    postcss: ">=8.0.9"
+    ts-node: ">=9.0.0"
+  peerDependenciesMeta:
+    postcss:
+      optional: true
+    ts-node:
+      optional: true
+  checksum: b61f890499ed7dcda1e36c20a9582b17d745bad5e2b2c7bc96942465e406bc43ae03f270c08e60d1e29dab1ee50cb26970b5eb20c9aae30e066e20bd607ae4e4
+  languageName: node
+  linkType: hard
+
 "postcss-load-config@npm:^3.1.4":
   version: 3.1.4
   resolution: "postcss-load-config@npm:3.1.4"
@@ -3309,24 +3327,6 @@ fsevents@~2.3.2:
     ts-node:
       optional: true
   checksum: 1c589504c2d90b1568aecae8238ab993c17dba2c44f848a8f13619ba556d26a1c09644d5e6361b5784e721e94af37b604992f9f3dc0483e687a0cc1cc5029a34
-  languageName: node
-  linkType: hard
-
-"postcss-load-config@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "postcss-load-config@npm:4.0.1"
-  dependencies:
-    lilconfig: ^2.0.5
-    yaml: ^2.1.1
-  peerDependencies:
-    postcss: ">=8.0.9"
-    ts-node: ">=9.0.0"
-  peerDependenciesMeta:
-    postcss:
-      optional: true
-    ts-node:
-      optional: true
-  checksum: b61f890499ed7dcda1e36c20a9582b17d745bad5e2b2c7bc96942465e406bc43ae03f270c08e60d1e29dab1ee50cb26970b5eb20c9aae30e066e20bd607ae4e4
   languageName: node
   linkType: hard
 
@@ -3599,7 +3599,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.14, postcss@npm:^8.4.16":
+"postcss@npm:8.4.16, postcss@npm:^8.4.14, postcss@npm:^8.4.16":
   version: 8.4.16
   resolution: "postcss@npm:8.4.16"
   dependencies:
@@ -3617,7 +3617,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prettier-plugin-svelte@npm:^2.7.0":
+"prettier-plugin-svelte@npm:2.7.0":
   version: 2.7.0
   resolution: "prettier-plugin-svelte@npm:2.7.0"
   peerDependencies:
@@ -3627,7 +3627,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:~2.7.1":
+"prettier@npm:2.7.1":
   version: 2.7.1
   resolution: "prettier@npm:2.7.1"
   bin:
@@ -4203,7 +4203,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"svelte-check@npm:^2.9.0":
+"svelte-check@npm:2.9.0":
   version: 2.9.0
   resolution: "svelte-check@npm:2.9.0"
   dependencies:
@@ -4229,6 +4229,55 @@ fsevents@~2.3.2:
   peerDependencies:
     svelte: ">=3.19.0"
   checksum: ac5f91030007c709e92992e9a06cda59304fe99c428d163aeff11c005b4bb293c504f1d1aa4a173cf27bbe38eaf7544956299074402efa1abb5ef61573b3f408
+  languageName: node
+  linkType: hard
+
+"svelte-preprocess@npm:4.10.7":
+  version: 4.10.7
+  resolution: "svelte-preprocess@npm:4.10.7"
+  dependencies:
+    "@types/pug": ^2.0.4
+    "@types/sass": ^1.16.0
+    detect-indent: ^6.0.0
+    magic-string: ^0.25.7
+    sorcery: ^0.10.0
+    strip-indent: ^3.0.0
+  peerDependencies:
+    "@babel/core": ^7.10.2
+    coffeescript: ^2.5.1
+    less: ^3.11.3 || ^4.0.0
+    postcss: ^7 || ^8
+    postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
+    pug: ^3.0.0
+    sass: ^1.26.8
+    stylus: ^0.55.0
+    sugarss: ^2.0.0
+    svelte: ^3.23.0
+    typescript: ^3.9.5 || ^4.0.0
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    coffeescript:
+      optional: true
+    less:
+      optional: true
+    node-sass:
+      optional: true
+    postcss:
+      optional: true
+    postcss-load-config:
+      optional: true
+    pug:
+      optional: true
+    sass:
+      optional: true
+    stylus:
+      optional: true
+    sugarss:
+      optional: true
+    typescript:
+      optional: true
+  checksum: 51a0820c14bcc411ddf3b1cf4c772e73873626ed0b6c54dfca9e06bd6a6b22c9502436df3f1a4dab9eb3a404bba95002fd70cadea29a84fc36da3071309a8b91
   languageName: node
   linkType: hard
 
@@ -4281,56 +4330,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"svelte-preprocess@npm:^4.10.7":
-  version: 4.10.7
-  resolution: "svelte-preprocess@npm:4.10.7"
-  dependencies:
-    "@types/pug": ^2.0.4
-    "@types/sass": ^1.16.0
-    detect-indent: ^6.0.0
-    magic-string: ^0.25.7
-    sorcery: ^0.10.0
-    strip-indent: ^3.0.0
-  peerDependencies:
-    "@babel/core": ^7.10.2
-    coffeescript: ^2.5.1
-    less: ^3.11.3 || ^4.0.0
-    postcss: ^7 || ^8
-    postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
-    pug: ^3.0.0
-    sass: ^1.26.8
-    stylus: ^0.55.0
-    sugarss: ^2.0.0
-    svelte: ^3.23.0
-    typescript: ^3.9.5 || ^4.0.0
-  peerDependenciesMeta:
-    "@babel/core":
-      optional: true
-    coffeescript:
-      optional: true
-    less:
-      optional: true
-    node-sass:
-      optional: true
-    postcss:
-      optional: true
-    postcss-load-config:
-      optional: true
-    pug:
-      optional: true
-    sass:
-      optional: true
-    stylus:
-      optional: true
-    sugarss:
-      optional: true
-    typescript:
-      optional: true
-  checksum: 51a0820c14bcc411ddf3b1cf4c772e73873626ed0b6c54dfca9e06bd6a6b22c9502436df3f1a4dab9eb3a404bba95002fd70cadea29a84fc36da3071309a8b91
-  languageName: node
-  linkType: hard
-
-"svelte@npm:^3.50.1":
+"svelte@npm:3.50.1":
   version: 3.50.1
   resolution: "svelte@npm:3.50.1"
   checksum: 58d2d8f2c2cdb1695ca41290d241780ad662aeb4d8af8def372820a5fac3185245d6abf5ac7bbae17b9033d907ccab0aa071d0650bc3f0379c5c3818001e41c5
@@ -4354,7 +4354,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.1.8":
+"tailwindcss@npm:3.1.8":
   version: 3.1.8
   resolution: "tailwindcss@npm:3.1.8"
   dependencies:
@@ -4443,7 +4443,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^10.9.1":
+"ts-node@npm:10.9.1":
   version: 10.9.1
   resolution: "ts-node@npm:10.9.1"
   dependencies:
@@ -4481,17 +4481,17 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"tslib@npm:2.4.0":
+  version: 2.4.0
+  resolution: "tslib@npm:2.4.0"
+  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "tslib@npm:2.4.0"
-  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
   languageName: node
   linkType: hard
 
@@ -4532,7 +4532,7 @@ typescript@*:
   languageName: node
   linkType: hard
 
-typescript@^4.8.3:
+typescript@4.8.3:
   version: 4.8.3
   resolution: "typescript@npm:4.8.3"
   bin:
@@ -4552,7 +4552,7 @@ typescript@^4.8.3:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.8.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.8.3#~builtin<compat/typescript>":
   version: 4.8.3
   resolution: "typescript@patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=32657b"
   bin:
@@ -4624,7 +4624,7 @@ typescript@^4.8.3:
   languageName: node
   linkType: hard
 
-"vite@npm:^3.1.1":
+"vite@npm:3.1.1":
   version: 3.1.1
   resolution: "vite@npm:3.1.1"
   dependencies:
