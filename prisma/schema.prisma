@@ -80,6 +80,7 @@ model Definition {
   text    String
   usageID BigInt?
   groupID BigInt?
+  sentences Sentences[]
 
   Group Group? @relation(fields: [groupID], references: [id])
   Usage Usage? @relation(fields: [usageID], references: [id])
@@ -90,6 +91,9 @@ model Definition {
 model Sentences {
   id   BigInt @id @default(autoincrement()) @db.BigInt
   text String
+  definitionID BigInt
+
+  Definition Definition @relation(fields: [definitionID], references: [id])
 
   @@map("sentences")
 }
