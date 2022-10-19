@@ -248,46 +248,46 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-auto@npm:^1.0.0-next.75":
-  version: 1.0.0-next.75
-  resolution: "@sveltejs/adapter-auto@npm:1.0.0-next.75"
+"@sveltejs/adapter-auto@npm:1.0.0-next.84":
+  version: 1.0.0-next.84
+  resolution: "@sveltejs/adapter-auto@npm:1.0.0-next.84"
   dependencies:
-    "@sveltejs/adapter-cloudflare": 1.0.0-next.34
-    "@sveltejs/adapter-netlify": 1.0.0-next.78
-    "@sveltejs/adapter-vercel": 1.0.0-next.76
-  checksum: ad52682865dfb52fbca406508a880d35fbd644eae96305173268421e6353ed5594997180b2f1e72e34ac1740cddb53aba2325f27ec76ea8528a724bef93944ec
+    "@sveltejs/adapter-cloudflare": 1.0.0-next.39
+    "@sveltejs/adapter-netlify": 1.0.0-next.81
+    "@sveltejs/adapter-vercel": 1.0.0-next.80
+  checksum: 99260c6bb12228344ff37a1f689f4a7601fb833efa0c9702e261290da388d51a4a56e721d501586a3c2feb21cad87163eddc2f48d74aea0fb122ba4ee190ff37
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-cloudflare@npm:1.0.0-next.34":
-  version: 1.0.0-next.34
-  resolution: "@sveltejs/adapter-cloudflare@npm:1.0.0-next.34"
+"@sveltejs/adapter-cloudflare@npm:1.0.0-next.39":
+  version: 1.0.0-next.39
+  resolution: "@sveltejs/adapter-cloudflare@npm:1.0.0-next.39"
   dependencies:
     "@cloudflare/workers-types": ^3.14.0
     esbuild: ^0.15.7
     worktop: 0.8.0-next.14
-  checksum: 15d595ae87793987848b68e10717cd32d92fc136d0684cd6d5135e3c9b881e293a650547dac08bae9965a8be728242a1d6921e27a18b48814163abb0c80c4c28
+  checksum: 03f7d3f79f9e07cb3f74ddd055f14be3eaf401b6bd703b32704cde5f10b8e76f17d44ec41d1c03157e5898b50d91901842384bd55b5797ffccdc4542339593d2
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-netlify@npm:1.0.0-next.78":
-  version: 1.0.0-next.78
-  resolution: "@sveltejs/adapter-netlify@npm:1.0.0-next.78"
+"@sveltejs/adapter-netlify@npm:1.0.0-next.81":
+  version: 1.0.0-next.81
+  resolution: "@sveltejs/adapter-netlify@npm:1.0.0-next.81"
   dependencies:
     "@iarna/toml": ^2.2.5
     esbuild: ^0.15.7
     set-cookie-parser: ^2.4.8
-  checksum: 0415c439f8c3b4f63591e032d5abc4c5cd548257577f95a6b925cf80f13fb8b8bd9faa08a81396214fa087bbc355931c532f6edf8375a770bd4413a36d2bd79c
+  checksum: de0ff4b690df15c7c18d09973e508c0d21088a46ffb52a3d4c51297d4bbfb2c99fd75460a5cef751fd19a9e940b8869f3a627d6dac1d5ce78a3e0b25cfcd1702
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-vercel@npm:1.0.0-next.76":
-  version: 1.0.0-next.76
-  resolution: "@sveltejs/adapter-vercel@npm:1.0.0-next.76"
+"@sveltejs/adapter-vercel@npm:1.0.0-next.80":
+  version: 1.0.0-next.80
+  resolution: "@sveltejs/adapter-vercel@npm:1.0.0-next.80"
   dependencies:
     "@vercel/nft": ^0.22.0
     esbuild: ^0.15.7
-  checksum: 3382e1fe6cd61bbce9cef05a91df31b444ddc571596b74ea33da60f3c4c599a3082473fdd23b95440e19c2e1ef6a6df932ff75fdbe801fc3a5b3408b4245120b
+  checksum: 4bc1528ffcb71511189d4b857fbe64c5e94fa8ab60fc03e93e93d476a9cf4e966bff1fe015d0343949510302d3b8a2d5c8498b922944bc9f0796a7b8eeaabf97
   languageName: node
   linkType: hard
 
@@ -3033,7 +3033,7 @@ fsevents@~2.3.2:
   dependencies:
     "@playwright/test": ^1.25.2
     "@prisma/client": latest
-    "@sveltejs/adapter-auto": ^1.0.0-next.75
+    "@sveltejs/adapter-auto": 1.0.0-next.84
     "@sveltejs/kit": ^1.0.0-next.484
     "@types/he": ^1
     "@types/lodash-es": ^4
