@@ -93,7 +93,7 @@ model Sentences {
   text String
   definitionID BigInt
 
-  Definition Definition @relation(fields: [definitionID], references: [id])
+  definition Definition @relation(fields: [definitionID], references: [id])
 
   @@map("sentences")
 }
