@@ -1,0 +1,15 @@
+FROM golang:latest
+
+WORKDIR /app
+
+# Copy the source code into the container
+COPY . .
+
+# Install any dependencies
+RUN go get -d -v ./...
+
+# Build the Go CLI app
+RUN go build -o odict ./path/to/your/app
+
+# Run the Go CLI app to generate SQL
+CMD ["./odict", "d", "-f", "postgres", "examples/example1.odict", "output.sql"]
